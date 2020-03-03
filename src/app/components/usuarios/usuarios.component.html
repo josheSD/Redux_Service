@@ -1,0 +1,16 @@
+<div *ngIf="loading">
+    <h1>Espere...</h1>
+</div>
+
+<div *ngIf="error">
+    <h1>Error: {{ error.status }}</h1>
+<p>
+    {{ error.message }}
+    <br>
+    {{ error.url }}
+</p>
+</div>
+
+<div *ngIf="usuarios?.length">
+    {{ usuarios | json}}
+</div>
